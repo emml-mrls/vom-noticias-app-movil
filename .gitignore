@@ -1,0 +1,64 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+.buildlog/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+lib/firebase_options.dart
+
+# Build outputs
+/build/
+**/build/
+
+# iOS
+ios/Flutter/.last_build_id
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/.symlinks/
+
+# Android
+android/.gradle/
+android/local.properties
+android/app/debug
+android/app/profile
+android/app/release
+android/key.properties
+android/app/google-services.json
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+
+# MacOS
+.DS_Store
+
+# Others
+*.log
+*.class
+*.pyc
+*.swp
+app.*.symbols
+app.*.map.json
+
+# Secretos y variables de entorno
+.env
+*.env
+
+# Carpetas de documentación autogenerada
+doc/api/
+
+# Archivos de sistema de Windows (ya que estás en Windows)
+Thumbs.db
+
+# Errores comunes de Flutter
+/bin/
