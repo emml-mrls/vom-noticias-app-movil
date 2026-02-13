@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vom_app/config/settings/change_notifier.dart';
 import 'package:vom_app/config/themes/vom_theme.dart';
-import 'package:vom_app/screens/inicio.dart';
+import 'package:vom_app/presentation/screens/inicio.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';

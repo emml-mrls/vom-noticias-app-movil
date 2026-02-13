@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:convert';
-import 'package:vom_app/screens/articulos.dart';
+import 'package:vom_app/presentation/screens/articulos.dart';
 
-class VomListArticles extends StatelessWidget {
+class VomListArticleswCateg extends StatelessWidget {
   final int index;
   final Map<String, dynamic> article;
 
-  const VomListArticles({Key? key, required this.index, required this.article})
+  const VomListArticleswCateg(
+      {Key? key, required this.index, required this.article})
       : super(key: key);
 
   @override
@@ -46,6 +47,20 @@ class VomListArticles extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 9.5, vertical: 3),
               child: Column(
                 children: [
+                  // CATEGEORIA DE NOTA
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+                    child: Text(
+                      article['category_title'] ?? 'Sin Categoría',
+                      style: const TextStyle(
+                        fontSize: 27,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        height: 1.1,
+                      ),
+                    ),
+                  ),
                   Container(
                     padding:
                         const EdgeInsetsDirectional.symmetric(horizontal: 6),

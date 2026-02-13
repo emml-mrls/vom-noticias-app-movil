@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:vom_app/services/api_service.dart';
+import 'package:vom_app/data/services/api_service.dart';
 import 'dart:math';
 
 class WebAddImagen extends StatefulWidget {

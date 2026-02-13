@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/services/api_service.dart';
-import 'package:vom_app/widgets/articulo_preview.dart';
-import 'package:vom_app/widgets/navigation/appbars.dart';
+import 'package:vom_app/data/services/api_service.dart';
+import 'package:vom_app/presentation/widgets/articulo_preview.dart';
+import 'package:vom_app/presentation/widgets/navigation/appbars.dart';
 
 class CategoryArticles extends StatelessWidget {
   final String categoryTitle;

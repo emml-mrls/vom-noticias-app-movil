@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/screens/secciones.dart';
+import 'package:vom_app/presentation/screens/secciones.dart';
 
 class Categorias extends StatelessWidget {
   Categorias({Key? key}) : super(key: key);

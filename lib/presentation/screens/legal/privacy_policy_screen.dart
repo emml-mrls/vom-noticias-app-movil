@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:vom_app/widgets/navigation/appbars.dart';
+import 'package:vom_app/presentation/widgets/navigation/appbars.dart';
 
 class PoliticaPrivacidadScreen extends StatelessWidget {
   const PoliticaPrivacidadScreen({Key? key}) : super(key: key);

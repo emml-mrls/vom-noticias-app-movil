@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/widgets/navigation/appbars.dart';
+import 'package:vom_app/presentation/widgets/navigation/appbars.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:vom_app/screens/legal/privacy_policy_screen.dart';
+import 'package:vom_app/presentation/screens/legal/privacy_policy_screen.dart';
 
 class TerminosUsoScreen extends StatelessWidget {
   const TerminosUsoScreen({Key? key}) : super(key: key);

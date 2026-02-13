@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/widgets/navigation/appbars.dart';
+import 'package:vom_app/presentation/widgets/navigation/appbars.dart';
 
 class AboutVomScreen extends StatelessWidget {
   const AboutVomScreen({Key? key}) : super(key: key);

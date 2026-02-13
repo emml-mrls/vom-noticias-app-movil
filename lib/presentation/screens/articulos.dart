@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/services/api_service.dart';
-import 'package:vom_app/widgets/navigation/appbars.dart';
+import 'package:vom_app/data/services/api_service.dart';
+import 'package:vom_app/presentation/widgets/navigation/appbars.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:convert';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/screens/config/config.dart';
-import 'package:vom_app/screens/legal/about_vom_screen.dart';
-import 'package:vom_app/screens/legal/privacy_policy_screen.dart';
-import 'package:vom_app/screens/legal/terms_of_use_screen.dart';
+import 'package:vom_app/presentation/screens/config/config.dart';
+import 'package:vom_app/presentation/screens/legal/about_vom_screen.dart';
+import 'package:vom_app/presentation/screens/legal/privacy_policy_screen.dart';
+import 'package:vom_app/presentation/screens/legal/terms_of_use_screen.dart';
 
 class VomDrawer extends StatelessWidget {
   final int selectedIndex; // Índice seleccionado
