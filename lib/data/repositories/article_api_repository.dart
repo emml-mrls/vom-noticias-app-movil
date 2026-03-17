@@ -14,10 +14,6 @@ class ArticleApiRepository implements IArticleRepository {
 
   ArticleApiRepository({required ArticleApiService apiService, required INetworkInfo networkInfo}) : _apiService = apiService, _networkInfo = networkInfo;
 
-  List<T> algo<T> (List<T> ts) {
-    return ts;
-  }
-
   Future<Either<Failure, T>> _checkErrors<T> (Future<T> Function() request) async{
     if (await _networkInfo.isConnected) return const Left(NetworkFailure());
     try {
