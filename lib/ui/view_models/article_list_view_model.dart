@@ -18,7 +18,7 @@ class ArticleListViewModel extends ChangeNotifier {
     notifyListeners();
     Either<Failure, List<Article>> result = catid != null ? await _repository.getByCat(catid) : await _repository.getAll(); 
     result.fold(
-      (error) => _allArticles = ArticleError(error: error.message), 
+      (error) => _allArticles = ArticleError(error: error.message, icon: error.icon),
       (articles) => _allArticles = ArticleSuccess(article: articles)
     );
     notifyListeners();

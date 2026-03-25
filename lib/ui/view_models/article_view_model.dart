@@ -18,7 +18,7 @@ class ArticleViewModel extends ChangeNotifier {
     notifyListeners();
     Either<Failure, Article> result = await _repository.getArticle(id);
     result.fold(
-      (error) => _article = ArticleError(error: error.message), 
+      (error) => _article = ArticleError(error: error.message, icon: error.icon), 
       (article) => _article = ArticleSuccess(article: article)
     );
     notifyListeners();

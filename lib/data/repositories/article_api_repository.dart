@@ -35,7 +35,7 @@ class ArticleApiRepository implements IArticleRepository {
     return _checkErrors(()async {
       final data = await _apiService.fetchData(Uri.parse("$urlbase&tipo=0"));
       return (data[0] as List).map((n) => ArticleModel.fromjson(n)).toList();
-    });        
+    });
   }
   @override
  Future<Either<Failure,List<Article>>> getLatest({int limit = 5, int offset = 5}) async {
@@ -47,7 +47,7 @@ class ArticleApiRepository implements IArticleRepository {
     return _checkErrors(() async {
       final data = await _apiService.fetchData(Uri.parse("$urlbase&tipo=1&categoryId=$catid"));
     return (data[0] as List).map((n) => ArticleModel.fromjson(n)).toList();
-    });    
+    });
   }
 
   @override

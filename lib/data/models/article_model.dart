@@ -1,9 +1,7 @@
 import 'package:vom_app/domain/entities/article.dart';
 
 class ArticleModel extends Article {
-  ArticleModel({required String id, required String title, required String introtext, final String? fulltext, required String catid, required String categoryTitle, required String createdById, required String creatorName, String? creatorimage, required String publishUp, required List<String> images, String? notesImagesBody}) 
-    : super(id: id, title: title, introtext:introtext, fulltext:fulltext, catid: catid, categoryTitle: categoryTitle, createdById: createdById, creatorName: creatorName, creatorimage:creatorimage, publishUp: publishUp, images: images, notesImagesBody: notesImagesBody);
-  
+  ArticleModel({required super.id, required super.title, required super.introtext, required super.fulltext, required super.catid, required super.categoryTitle, required super.createdById, required super.creatorName, required super.creatorimage, required super.publishUp, required super.images, required super.notesImagesBody});
   factory ArticleModel.fromjson(Map<String, dynamic> json) {
     return ArticleModel(
       id: json["id"]?.toString() ?? "Sin id",
