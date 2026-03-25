@@ -9,7 +9,7 @@ class Article {
   final String creatorName;
   final String? creatorimage;
   final String publishUp;
-  final List<String> images;
+  final String image;
   final String? notesImagesBody;
 
   //Article.vacio();
@@ -24,7 +24,7 @@ class Article {
     required this.creatorName, 
     required this.creatorimage,
     required this.publishUp,
-    required this.images,
+    required this.image,
     required this.notesImagesBody
     });
 }
