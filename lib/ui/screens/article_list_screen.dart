@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:vom_app/core/states/article_state.dart';
+import 'package:vom_app/ui/view_models/models/article_state.dart';
 import 'package:vom_app/domain/repositories/i_article_repository.dart';
 import 'package:vom_app/ui/view_models/article_list_view_model.dart';
 import 'package:vom_app/ui/view_models/models/feed_block.dart';
