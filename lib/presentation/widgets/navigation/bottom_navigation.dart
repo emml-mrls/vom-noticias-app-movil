@@ -4,11 +4,7 @@ class VomBottomAppBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
 
-  const VomBottomAppBar({
-    Key? key,
-    required this.selectedIndex,
-    required this.onItemTapped,
-  }) : super(key: key);
+  const VomBottomAppBar({super.key, required this.selectedIndex, required this.onItemTapped});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +21,7 @@ class VomBottomAppBar extends StatelessWidget {
               onPressed: () => onItemTapped(0),
               tooltip: 'Inicio',
               color: selectedIndex == 0
-                  ? Theme.of(context).primaryColorDark
+                  ? Theme.of(context).colorScheme.tertiary
                   : Colors.white,
             ),
             IconButton(
@@ -36,7 +32,7 @@ class VomBottomAppBar extends StatelessWidget {
               onPressed: () => onItemTapped(1),
               tooltip: 'Municipios',
               color: selectedIndex == 1
-                  ? Theme.of(context).primaryColorDark
+                  ? Theme.of(context).colorScheme.tertiary
                   : Colors.white,
             ),
           ],

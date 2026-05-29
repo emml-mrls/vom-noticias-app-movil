@@ -1,5 +1,5 @@
 import 'package:vom_app/domain/entities/article.dart';
-import 'package:vom_app/ui/view_models/models/card_variant.dart';
+import 'package:vom_app/presentation/view_models/models/card_variant.dart';
 
 sealed class FeedBlock {}
 

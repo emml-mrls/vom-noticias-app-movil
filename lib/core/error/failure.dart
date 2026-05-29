@@ -19,6 +19,13 @@ class ParseFailure extends Failure {
   const ParseFailure([super.message = 'Error al mostrar los datos', super.icon = Icons.sync_problem]);
 }
 
+class SaveSettingsFailure extends Failure {
+  const SaveSettingsFailure([super.message = 'Error al guardar en memoria', super.icon = Icons.folder_off]);
+}
+
+class GetSettingsFailure extends Failure {
+  const GetSettingsFailure([super.message = '', super.icon = Icons.folder_off]);
+}
 class UnknownFailure extends Failure {  
   const UnknownFailure([super.message = 'Uups! Ocurrió un error inesperado', super.icon = Icons.error]);
 }

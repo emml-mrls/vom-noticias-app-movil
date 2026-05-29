@@ -3,12 +3,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:convert';
 import 'package:vom_app/presentation/screens/articulos.dart';
 
+// ESTE ARCHIVO ES OBSOLETO
+
 class VomListArticles extends StatelessWidget {
   final int index;
   final Map<String, dynamic> article;
 
-  const VomListArticles({Key? key, required this.index, required this.article})
-      : super(key: key);
+  const VomListArticles({super.key, required this.index, required this.article});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class VomListArticles extends StatelessWidget {
           },
           child: Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
+              color: Theme.of(context).colorScheme.surfaceContainer,
               borderRadius: BorderRadius.circular(22),
             ),
             child: Padding(

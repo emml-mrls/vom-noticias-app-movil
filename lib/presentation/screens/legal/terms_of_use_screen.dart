@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/presentation/widgets/navigation/appbars.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vom_app/presentation/screens/legal/privacy_policy_screen.dart';
+import 'package:vom_app/presentation/widgets/navigation/large_brand_appbar.dart';
 
 class TerminosUsoScreen extends StatelessWidget {
-  const TerminosUsoScreen({Key? key}) : super(key: key);
+  const TerminosUsoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const VomAppbar(title: "Noticias"),
+      appBar: const LargeBrandAppbar(title: "Noticias"),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24.0),
         child: Column(

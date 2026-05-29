@@ -2,7 +2,21 @@ import 'package:vom_app/data/models/article_images.dart';
 import 'package:vom_app/domain/entities/article.dart';
 
 class ArticleModel extends Article {
-  ArticleModel({required super.id, required super.title, required super.introtext, required super.fulltext, required super.catid, required super.categoryTitle, required super.createdById, required super.creatorName, required super.creatorimage, required super.publishUp, required super.image, required super.notesImagesBody});
+  ArticleModel({
+    required super.id,
+    required super.title,
+    required super.introtext,
+    required super.fulltext,
+    required super.catid,
+    required super.categoryTitle,
+    required super.createdById,
+    required super.creatorName,
+    required super.creatorimage,
+    required super.publishUp,
+    required super.image,
+    required super.notesImagesBody
+  });
+
   factory ArticleModel.fromjson(Map<String, dynamic> json) {
     return ArticleModel(
       id: json["id"]?.toString() ?? "Sin id",
@@ -17,6 +31,23 @@ class ArticleModel extends Article {
       publishUp: json["publish_up"]?.toString() ?? "", 
       image: ArticleImages().cleanImages(json["images"]),
       notesImagesBody: json["notes_image_body"] ?? ""
+    );
+  }
+
+  Article toEntity () {
+    return Article(
+      id: id,
+      title: title,
+      introtext: introtext, 
+      fulltext: fulltext,
+      catid: catid,
+      categoryTitle: categoryTitle,
+      createdById: createdById,
+      creatorName: creatorName, 
+      creatorimage: creatorimage, 
+      publishUp: publishUp,
+      image: image, 
+      notesImagesBody: notesImagesBody
     );
   }
 }

@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:vom_app/core/theme/components_theme/theme_components.dart';
+import 'package:vom_app/core/theme/typography/typographys.dart';
+
+class AppTheme {
+  final Typographys typography;
+  final ThemeComponents themeComponents;
+  final ColorScheme colors;
+  AppTheme({
+    required this.typography,
+    required this.themeComponents,
+    required this.colors,
+  });
+
+  ThemeData getTheme () {
+    final AppBarThemeData appBar = themeComponents.getAppBarTheme();
+    final BottomAppBarThemeData bottomBar = themeComponents.getBotomAppBarTheme();
+    final TextTheme textTheme =  typography.getTypography();
+    final IconThemeData iconsDesign = themeComponents.getIconTheme();
+    return ThemeData(
+      useMaterial3: true,
+      brightness: Brightness.light,
+      colorScheme: colors,
+      appBarTheme: appBar,
+      bottomAppBarTheme: bottomBar,
+      iconTheme: iconsDesign,
+      textTheme: textTheme
+    );
+  }
+}

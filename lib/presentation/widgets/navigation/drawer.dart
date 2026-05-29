@@ -4,15 +4,13 @@ import 'package:vom_app/presentation/screens/legal/about_vom_screen.dart';
 import 'package:vom_app/presentation/screens/legal/privacy_policy_screen.dart';
 import 'package:vom_app/presentation/screens/legal/terms_of_use_screen.dart';
 
+// REVISAR TRABAJO
+
 class VomDrawer extends StatelessWidget {
   final int selectedIndex; // Índice seleccionado
   final Function(int) onItemTapped; // Función para manejar el cambio
 
-  const VomDrawer({
-    Key? key,
-    required this.selectedIndex,
-    required this.onItemTapped,
-  }) : super(key: key);
+  const VomDrawer({super.key, required this.selectedIndex, required this.onItemTapped,});
 
   @override
   Widget build(BuildContext context) {
@@ -136,14 +134,7 @@ class VomTile extends StatelessWidget {
   final VoidCallback? onTap;
   final double? size;
 
-  const VomTile({
-    Key? key,
-    required this.icon,
-    required this.title,
-    this.isSelected = false,
-    this.onTap,
-    this.size,
-  }) : super(key: key);
+  const VomTile({super.key, required this.icon, required this.title, this.isSelected = false, this.onTap, this.size,});
 
   @override
   Widget build(BuildContext context) {

@@ -21,3 +21,10 @@ class NetworkException implements Exception {
   @override
   String toString() => 'NetworkException';
 }
+
+class StorageException implements Exception{
+  const StorageException();
+
+  @override
+  String toString() => 'StorageException';
+}

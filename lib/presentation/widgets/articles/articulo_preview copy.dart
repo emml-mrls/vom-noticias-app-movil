@@ -3,16 +3,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:convert';
 import 'package:vom_app/presentation/screens/articulos.dart';
 
+// ESTE ARCHIVO ES OBSOLETO
+
 class VomListArticleswCateg extends StatelessWidget {
-  final int index;
   final Map<String, dynamic> article;
 
-  const VomListArticleswCateg(
-      {Key? key, required this.index, required this.article})
-      : super(key: key);
+  const VomListArticleswCateg({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
+    Color color = Theme.of(context).colorScheme.surfaceContainer;
     Map<String, dynamic>? images;
     if (article['images'] != null && article['images'].isNotEmpty) {
       images = jsonDecode(article['images']);
@@ -38,13 +38,15 @@ class VomListArticleswCateg extends StatelessWidget {
               ),
             );
           },
+          
           child: Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
+              color: Theme.of(context).colorScheme.surfaceContainer,
               borderRadius: BorderRadius.circular(22),
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 9.5, vertical: 3),
+              // Esta es la columna de contenido
               child: Column(
                 children: [
                   // CATEGEORIA DE NOTA

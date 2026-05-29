@@ -3,8 +3,10 @@ import 'package:provider/provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:vom_app/config/settings/change_notifier.dart';
 
+ // ESTE ARCHIVO ES OBSOLETO
+
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   @override
   SettingsScreenState createState() => SettingsScreenState();

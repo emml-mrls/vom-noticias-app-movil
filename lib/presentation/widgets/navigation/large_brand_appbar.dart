@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:vom_app/presentation/widgets/branding/icon_logo.dart';
 
-  // ESTE ARCHIVVO ES OBSOLETO
-
-class VomAppbar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-  const VomAppbar({super.key, required this.title});
+class LargeBrandAppbar extends StatelessWidget implements PreferredSizeWidget{
+const LargeBrandAppbar({super.key, required this.title});
+final String title;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return AppBar(
       title: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +26,6 @@ class VomAppbar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
   @override
   Size get preferredSize => const Size.fromHeight(160.0);
 }

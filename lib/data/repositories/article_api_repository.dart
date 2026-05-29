@@ -5,17 +5,19 @@ import 'package:vom_app/core/network/i_network_info.dart';
 import 'package:vom_app/data/models/article_model.dart';
 import 'package:vom_app/domain/entities/article.dart';
 import 'package:vom_app/domain/repositories/i_article_repository.dart';
-import 'package:vom_app/data/services/article_api_service.dart';
+import 'package:vom_app/core/services/api_service.dart';
+
+// ESTE ARCHIVO ES OBSOLETO
 
 class ArticleApiRepository implements IArticleRepository {
-  final ArticleApiService _apiService;
+  final ApiService _apiService;
   final INetworkInfo _networkInfo;
   final String urlbase = 'https://vomnoticias.com/administrator/emml/services/index.php?key=intelinsidecore';
 
-  ArticleApiRepository({required ArticleApiService apiService, required INetworkInfo networkInfo}) : _apiService = apiService, _networkInfo = networkInfo;
+  ArticleApiRepository({required ApiService apiService, required INetworkInfo networkInfo}) : _apiService = apiService, _networkInfo = networkInfo;
 
   Future<Either<Failure, T>> _checkErrors<T> (Future<T> Function() request) async{
-    if (await _networkInfo.isConnected) return const Left(NetworkFailure());
+    if (!await _networkInfo.isConnected) return const Left(NetworkFailure());
     try {
       return Right(await request());
     }
@@ -34,7 +36,7 @@ class ArticleApiRepository implements IArticleRepository {
   Future <Either<Failure,List<Article>>> getAll() async {
     return _checkErrors(()async {
       final data = await _apiService.fetchData(Uri.parse("$urlbase&tipo=0"));
-      return (data[0] as List).map((n) => ArticleModel.fromjson(n)).toList();
+      return data.map<Article>((n) => ArticleModel.fromjson(n[0]).toEntity()).toList();
     });
   }
   @override
