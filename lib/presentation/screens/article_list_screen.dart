@@ -10,13 +10,14 @@ import 'package:vom_app/presentation/widgets/errors/error_view.dart';
 import 'package:vom_app/presentation/widgets/adds/footer_radio.dart';
 
 class ArticleListScreen extends StatelessWidget {
-  const ArticleListScreen({super.key});
+  const ArticleListScreen({super.key, this.catid});
+  final int? catid;
 
   @override
   Widget build(BuildContext context){
     final repository = Provider.of<IArticleRepository>(context, listen: false);
     return ChangeNotifierProvider(
-      create: (_) => ArticleListViewModel(repository)..fetchArticles(null),
+      create: (_) => ArticleListViewModel(repository)..fetchArticles(catid),
       child: SafeArea(
         child: _ArticleListBody(),
       )

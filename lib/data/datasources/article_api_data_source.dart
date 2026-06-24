@@ -26,11 +26,11 @@ class ArticleApiDataSource {
 
   Future<List<ArticleModel>> getByCat(int catid) async {
     return _checkNetwork(() async{
-      final endpoint = "&tipo=1&categoryId=$catid";
+      final endpoint = "&tipo=2&categoryId=$catid";
       final url = urlbase + endpoint;
       final data = await _apiService.fetchData(Uri.parse(url));
 
-      return data.map<ArticleModel>((n) => ArticleModel.fromjson(n[0])).toList();
+      return data[0].map<ArticleModel>((n) => ArticleModel.fromjson(n)).toList();
     });
   }
   

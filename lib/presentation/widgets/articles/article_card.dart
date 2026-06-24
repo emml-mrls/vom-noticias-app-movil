@@ -26,8 +26,7 @@ class ArticleCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 9.5, vertical: 3),
                 child: switch (variant) {
-                  Latest() => CardHomeContent(article: article),
-                  ByCategory() => Center(),
+                  Latest() || ByCategory()=> CardHomeContent(article: article, variant: variant,),
                   Detail() => Center()
                 }
               ),

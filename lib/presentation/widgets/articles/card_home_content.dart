@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:vom_app/domain/entities/article.dart';
+import 'package:vom_app/presentation/view_models/models/card_variant.dart';
 import 'package:vom_app/presentation/widgets/articles/components/article_image.dart';
 import 'package:vom_app/presentation/widgets/articles/components/creator_image.dart';
 
 class CardHomeContent extends StatelessWidget {
+  const CardHomeContent({super.key, required this.article, required this.variant});
   final Article article;
-  const CardHomeContent({super.key, required this.article});
+  final CardVariant variant;
 
   @override
   Widget build(BuildContext context){
     return Column(
       children: [
         // CATEGORIA
+        if(variant is! ByCategory)
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
           child: Text(
@@ -58,7 +61,7 @@ class CardHomeContent extends StatelessWidget {
             style: Theme.of(context).textTheme.titleLarge
           ),  
         ),
-        // TITULO DE INTRODUCCION
+        // TEXTO DE INTRODUCCION
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: Text(

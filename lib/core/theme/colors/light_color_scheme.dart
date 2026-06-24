@@ -6,13 +6,13 @@ class LightColorScheme {
     brightness: Brightness.light,
 
     // PRIMARY
-    primary: BrandingColors.red,
+    primary: BrandingColors.blue,
     onPrimary: Colors.white,
     //primaryContainer: ,
     //onPrimaryContainer: ,
 
     // SECONDARY
-    secondary: BrandingColors.blue,
+    secondary: BrandingColors.red,
     onSecondary: Colors.white,
     //secondaryContainer: BrandingColors.vomAzul,
     //onSecondaryContainer: ,

@@ -10,7 +10,6 @@ class ThemeComponents {
       color: colors.onSurface,
       size: 40,
       grade: 200,
-      opacity: 0,
     );
   }
 
@@ -18,7 +17,7 @@ class ThemeComponents {
     return AppBarThemeData(
       centerTitle: true,
       backgroundColor: colors.surfaceContainerHighest,
-      foregroundColor: colors.onSurface,
+      foregroundColor: colors.onPrimary,
       elevation: 0,
       scrolledUnderElevation: 0,
       titleTextStyle: textTheme.displaySmall,
@@ -26,7 +25,7 @@ class ThemeComponents {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(25)),
       ),
-      iconTheme: IconThemeData(size: 40),
+      iconTheme: getIconTheme().copyWith(color: colors.onPrimary),
     );
   }
 
