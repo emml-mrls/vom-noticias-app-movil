@@ -17,6 +17,7 @@ class AppTheme {
     final BottomAppBarThemeData bottomBar = themeComponents.getBotomAppBarTheme();
     final TextTheme textTheme =  typography.getTypography();
     final IconThemeData iconsDesign = themeComponents.getIconTheme();
+    final DrawerThemeData drawerTheme = themeComponents.getDrawerTheme();
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
@@ -24,7 +25,8 @@ class AppTheme {
       appBarTheme: appBar,
       bottomAppBarTheme: bottomBar,
       iconTheme: iconsDesign,
-      textTheme: textTheme
+      textTheme: textTheme,
+      drawerTheme: drawerTheme
     );
   }
 }

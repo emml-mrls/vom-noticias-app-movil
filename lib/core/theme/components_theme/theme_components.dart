@@ -5,6 +5,12 @@ class ThemeComponents {
   final TextTheme textTheme;
   ThemeComponents({required this.colors, required this.textTheme});
 
+  DrawerThemeData getDrawerTheme(){
+    return DrawerThemeData(
+      backgroundColor: colors.surfaceContainer
+    );
+  }
+
   IconThemeData getIconTheme(){
     return IconThemeData(
       color: colors.onSurface,

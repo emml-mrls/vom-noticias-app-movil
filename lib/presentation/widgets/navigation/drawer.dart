@@ -12,7 +12,6 @@ class VomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.surfaceContainer,
       child: ListView(
         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
         children: <Widget>[
