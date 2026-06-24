@@ -3,9 +3,6 @@ import 'package:vom_app/presentation/screens/config/config.dart';
 import 'package:vom_app/presentation/screens/legal/about_vom_screen.dart';
 import 'package:vom_app/presentation/screens/legal/privacy_policy_screen.dart';
 import 'package:vom_app/presentation/screens/legal/terms_of_use_screen.dart';
-
-// REVISAR TRABAJO
-
 class VomDrawer extends StatelessWidget {
   final int selectedIndex; // Índice seleccionado
   final Function(int) onItemTapped; // Función para manejar el cambio
@@ -15,15 +12,12 @@ class VomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor:
-          Theme.of(context).dialogBackgroundColor, // Color oscuro para el menú
+      backgroundColor: Theme.of(context).colorScheme.surfaceContainer,
       child: ListView(
         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
         children: <Widget>[
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 28, 37, 47),
-            ),
+          DrawerHeader(
+            decoration: BoxDecoration(color: Theme.of(context).colorScheme.surfaceContainerHighest),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -72,7 +66,7 @@ class VomDrawer extends StatelessWidget {
               );
             },
           ),
-          const Divider(color: Colors.white70),
+          Divider(color: Theme.of(context).colorScheme.onSecondary),
           VomTile(
             icon: Icons.info,
             title: 'Sobre Nosotros',
@@ -107,15 +101,14 @@ class VomDrawer extends StatelessWidget {
               );
             },
           ),
-          const Divider(color: Colors.white70),
-          // Leyenda "Created by Emml Mrls"
+          Divider(color: Theme.of(context).colorScheme.onSecondary),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Created by Emml Mrls', // Cambia a tu alias o cualquier texto que prefieras
+              'Created by Emml Mrls',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white70,
+                color: Theme.of(context).colorScheme.surfaceContainerHigh,
                 fontSize: 14,
                 fontStyle: FontStyle.italic,
               ),
@@ -145,17 +138,15 @@ class VomTile extends StatelessWidget {
           child: Icon(
             icon,
             size: size ?? 24, // Tamaño predeterminado si no se especifica
-            color:
-                isSelected ? Theme.of(context).primaryColorDark : Colors.white,
+            color: isSelected ? Theme.of(context).colorScheme.primary :Theme.of(context).colorScheme.onPrimary,
           ),
         ),
       ),
       title: Text(
         title,
-        style: TextStyle(
-          color: isSelected ? Theme.of(context).primaryColorDark : Colors.white,
-          fontSize: 18,
-          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+        style: Theme.of(context).textTheme.titleSmall!.copyWith(
+          color: isSelected ? Theme.of(context).colorScheme.primary :Theme.of(context).colorScheme.onPrimary,
+          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal
         ),
       ),
       onTap: onTap,

@@ -64,7 +64,9 @@ class Typographys {
       ),
 
       // ETIQUETAS IMPORTANTES
-      titleSmall: baseTextStyle.copyWith(),
+      titleSmall: baseTextStyle.copyWith(
+        fontSize: fontBaseSize * 1.25 * fontScale,
+      ),
 
   // BODY
 
