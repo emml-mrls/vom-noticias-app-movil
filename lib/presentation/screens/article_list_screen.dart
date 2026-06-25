@@ -15,7 +15,7 @@ class ArticleListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    final repository = Provider.of<IArticleRepository>(context, listen: false);
+    final repository = context.watch<IArticleRepository>();
     return ChangeNotifierProvider(
       create: (_) => ArticleListViewModel(repository)..fetchArticles(catid),
       child: SafeArea(
