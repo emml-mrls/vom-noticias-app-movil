@@ -6,10 +6,12 @@ class AppTheme {
   final Typographys typography;
   final ThemeComponents themeComponents;
   final ColorScheme colors;
+  final Brightness brightness;
   AppTheme({
     required this.typography,
     required this.themeComponents,
     required this.colors,
+    required this.brightness
   });
 
   ThemeData getTheme () {
@@ -20,7 +22,7 @@ class AppTheme {
     final DrawerThemeData drawerTheme = themeComponents.getDrawerTheme();
     return ThemeData(
       useMaterial3: true,
-      brightness: Brightness.light,
+      brightness: brightness,
       colorScheme: colors,
       appBarTheme: appBar,
       bottomAppBarTheme: bottomBar,

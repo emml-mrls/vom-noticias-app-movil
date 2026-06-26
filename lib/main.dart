@@ -72,7 +72,8 @@ class MyApp extends StatelessWidget {
     final ColorScheme colors = settings!.isDarkMode ? DarkColorScheme.colors : LightColorScheme.colors;
     final Typographys typography = Typographys.build(fontScale: settings.fontScale, colors: colors);
     final ThemeComponents themeComponents = ThemeComponents(colors: colors, textTheme: typography.getTypography());
-    final AppTheme apptheme = AppTheme(typography: typography, themeComponents: themeComponents, colors: colors);
+    final Brightness brightness = settings.isDarkMode ? Brightness.dark : Brightness.light;
+    final AppTheme apptheme = AppTheme(typography: typography, themeComponents: themeComponents, colors: colors, brightness: brightness);
 
     //final settingsObsoleto = context.watch<SettingsNotifier>().settings;
     return MaterialApp(
