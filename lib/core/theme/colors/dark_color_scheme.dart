@@ -6,12 +6,16 @@ class DarkColorScheme {
     brightness: Brightness.dark,
 
     // PRIMARY
-    primary: BrandingColors.red,
+    primary: BrandingColors.blue,
     onPrimary: Colors.white,
 
     // SECONDARY
-    secondary: BrandingColors.blue,
+    secondary: BrandingColors.red,
     onSecondary: Colors.white,
+
+    // TERTIARY
+    tertiary: BrandingColors.grayD,
+    onTertiary: Colors.white,
 
     // // ERROR
     error: Colors.red,
@@ -20,8 +24,8 @@ class DarkColorScheme {
     // SURFACE
     surface: Colors.black, 
     onSurface: Colors.white,
-    surfaceContainer: BrandingColors.redD,
-    surfaceContainerHigh: BrandingColors.blueD,
-    surfaceContainerHighest: BrandingColors.grayD,
+    surfaceContainer: BrandingColors.blueD,
+    surfaceContainerHigh: Colors.black,
+    surfaceContainerHighest: BrandingColors.blueD,
   );
 }

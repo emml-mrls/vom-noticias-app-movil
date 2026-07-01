@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class IconLogo extends StatelessWidget {
-  const IconLogo({super.key, this.height});
-  final double? height;
+class BrandMark extends StatelessWidget {
+const BrandMark({super.key, this.height});
+final double? height;
 
   @override
   Widget build(BuildContext context){

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vom_app/presentation/widgets/branding/icon_logo.dart';
+import 'package:vom_app/presentation/widgets/branding/brand_logo.dart';
 
 class LargeBrandAppbar extends StatelessWidget implements PreferredSizeWidget{
 const LargeBrandAppbar({super.key, required this.title});
@@ -12,7 +12,7 @@ final String title;
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 8),
-          IconLogo(height: 80),
+          BrandLogo(height: 110),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12),
             decoration: const BoxDecoration(

@@ -6,13 +6,13 @@ class LightColorScheme {
     brightness: Brightness.light,
 
     // PRIMARY
-    primary: BrandingColors.blue,
+    primary: BrandingColors.red,
     onPrimary: Colors.white,
     //primaryContainer: ,
     //onPrimaryContainer: ,
 
     // SECONDARY
-    secondary: BrandingColors.red,
+    secondary: BrandingColors.blue,
     onSecondary: Colors.white,
     //secondaryContainer: BrandingColors.vomAzul,
     //onSecondaryContainer: ,
@@ -32,9 +32,9 @@ class LightColorScheme {
     // SURFACE
     surface: Colors.white, 
     onSurface: Colors.black,
-    surfaceContainer: BrandingColors.gray,
+    surfaceContainer: BrandingColors.red,
     surfaceContainerHigh: BrandingColors.grayL,
-    surfaceContainerHighest: BrandingColors.blue,
+    surfaceContainerHighest: BrandingColors.red,
     // surfaceContainerLow: ,
     // surfaceContainerLowest: ,
   );

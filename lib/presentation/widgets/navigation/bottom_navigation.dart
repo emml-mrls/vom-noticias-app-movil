@@ -22,7 +22,7 @@ class VomBottomAppBar extends StatelessWidget {
               tooltip: 'Inicio',
               color: selectedIndex == 0
                   ? Theme.of(context).colorScheme.tertiary
-                  : Colors.white,
+                  : Theme.of(context).colorScheme.onTertiary
             ),
             IconButton(
               icon: const Icon(
@@ -33,7 +33,7 @@ class VomBottomAppBar extends StatelessWidget {
               tooltip: 'Municipios',
               color: selectedIndex == 1
                   ? Theme.of(context).colorScheme.tertiary
-                  : Colors.white,
+                  : Theme.of(context).colorScheme.onTertiary,
             ),
           ],
         ),

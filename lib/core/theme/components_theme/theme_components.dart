@@ -7,13 +7,13 @@ class ThemeComponents {
 
   DrawerThemeData getDrawerTheme(){
     return DrawerThemeData(
-      backgroundColor: colors.surfaceContainer
+      backgroundColor: colors.surfaceContainerHigh
     );
   }
 
   IconThemeData getIconTheme(){
     return IconThemeData(
-      color: colors.onSurface,
+      color: colors.primary,
       size: 40,
       grade: 200,
     );

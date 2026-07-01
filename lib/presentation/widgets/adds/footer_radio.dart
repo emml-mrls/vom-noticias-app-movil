@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FooterRadio extends StatelessWidget {
-const FooterRadio({ Key? key }) : super(key: key);
+const FooterRadio({super.key});
 
   @override
   Widget build(BuildContext context){
@@ -9,7 +9,7 @@ const FooterRadio({ Key? key }) : super(key: key);
       margin: const EdgeInsets.only(top: 10),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(24.4),
           topRight: Radius.circular(24.4),
